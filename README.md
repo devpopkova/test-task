@@ -1,59 +1,35 @@
-# 🍎🥕 Fruits and Vegetables
+API Documentation
+Endpoints
+_List Products_
 
-## 🎯 Goal
-We want to build a service which will take a `request.json` and:
-* Process the file and create two separate collections for `Fruits` and `Vegetables`
-* Each collection has methods like `add()`, `remove()`, `list()`;
-* Units have to be stored as grams;
-* Store the collections in a storage engine of your choice. (e.g. Database, In-memory)
-* Provide an API endpoint to query the collections. As a bonus, this endpoint can accept filters to be applied to the returning collection.
-* Provide another API endpoint to add new items to the collections (i.e., your storage engine).
-* As a bonus you might:
-  * consider giving option to decide which units are returned (kilograms/grams);
-  * how to implement `search()` method collections;
-  * use latest version of Symfony's to embbed your logic 
+`GET /api/products/{type}`
 
-### ✔️ How can I check if my code is working?
-You have two ways of moving on:
-* You call the Service from PHPUnit test like it's done in dummy test (just run `bin/phpunit` from the console)
+Parameters:
 
-or
+type (path): fruit or vegetable
+unit (query): g or kg
+minQuantity (query, optional): Minimum quantity filter
+maxQuantity (query, optional): Maximum quantity filter
 
-* You create a Controller which will be calling the service with a json payload
+_Create Products_
 
-## 💡 Hints before you start working on it
-* Keep KISS, DRY, YAGNI, SOLID principles in mind
-* Timebox your work - we expect that you would spend between 3 and 4 hours.
-* Your code should be tested
+`POST /api/products`
 
-## When you are finished
-* Please upload your code to a public git repository (i.e. GitHub, Gitlab)
+Request Body:
+[
+    {
+        "name": "Apple",
+        "quantity": 500,
+        "unit": "g",
+        "type": "fruit"
+    }
+]
 
-## 🐳 Docker image
-Optional. Just here if you want to run it isolated.
+_Delete Product_
 
-### 📥 Pulling image
-```bash
-docker pull tturkowski/fruits-and-vegetables
-```
+`DELETE /api/products/{type}/{id}`
 
-### 🧱 Building image
-```bash
-docker build -t tturkowski/fruits-and-vegetables -f docker/Dockerfile .
-```
+Parameters:
 
-### 🏃‍♂️ Running container
-```bash
-docker run -it -w/app -v$(pwd):/app tturkowski/fruits-and-vegetables sh 
-```
-
-### 🛂 Running tests
-```bash
-docker run -it -w/app -v$(pwd):/app tturkowski/fruits-and-vegetables bin/phpunit
-```
-
-### ⌨️ Run development server
-```bash
-docker run -it -w/app -v$(pwd):/app -p8080:8080 tturkowski/fruits-and-vegetables php -S 0.0.0.0:8080 -t /app/public
-# Open http://127.0.0.1:8080 in your browser
-```
+type (path): Product type
+id (path): Product ID
