@@ -3,7 +3,7 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Integration\Repository;
+namespace App\Tests\App\Integration\Repository;
 
 use App\DTO\FilterProductDTO;
 use App\Entity\Product;
