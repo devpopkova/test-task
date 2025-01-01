@@ -9,7 +9,7 @@ _List Products_
 Parameters:
 
 * type (path): fruit or vegetable
-* unit (query): g or kg
+* unit (query): g or kg (by default is 'g')
 * minQuantity (query, optional): Minimum quantity filter
 * maxQuantity (query, optional): Maximum quantity filter
 
