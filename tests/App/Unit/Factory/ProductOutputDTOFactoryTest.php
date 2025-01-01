@@ -16,7 +16,7 @@ class ProductOutputDTOFactoryTest extends TestCase
         $inputData = [
             'name' => 'Apple',
             'quantity' => 2.5,
-            'unit' => 'kilograms',
+            'unit' => 'kg',
         ];
 
         $dto = $factory->createFromArray($inputData);
@@ -24,6 +24,6 @@ class ProductOutputDTOFactoryTest extends TestCase
         $this->assertInstanceOf(ProductOutputDTO::class, $dto);
         $this->assertEquals('Apple', $dto->name);
         $this->assertEquals(2.5, $dto->quantity);
-        $this->assertEquals('kilograms', $dto->unit);
+        $this->assertEquals('kg', $dto->unit);
     }
 }

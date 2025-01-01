@@ -36,13 +36,13 @@ class ProductInputDTOFactoryTest extends TestCase
                 'inputData' => [
                     'name' => 'Apple',
                     'quantity' => 2.5,
-                    'unit' => 'Kilograms',
+                    'unit' => 'Kg',
                     'type' => 'fruit',
                 ],
                 'expectedDTO' => new ProductInputDTO(
                     name: 'Apple',
                     quantity: 2.5,
-                    unit: 'kilograms',
+                    unit: 'kg',
                     type: 'fruit'
                 ),
             ],
@@ -50,13 +50,13 @@ class ProductInputDTOFactoryTest extends TestCase
                 'inputData' => [
                     'name' => 'Carrot',
                     'quantity' => 500,
-                    'unit' => 'GRAMS',
+                    'unit' => 'G',
                     'type' => 'Vegetable',
                 ],
                 'expectedDTO' => new ProductInputDTO(
                     name: 'Carrot',
                     quantity: 500,
-                    unit: 'grams',
+                    unit: 'g',
                     type: 'vegetable'
                 ),
             ],
@@ -64,13 +64,13 @@ class ProductInputDTOFactoryTest extends TestCase
                 'inputData' => [
                     'name' => 'Banana',
                     'quantity' => 1.2,
-                    'unit' => 'KiLoGrams',
+                    'unit' => 'Kg',
                     'type' => 'fruit',
                 ],
                 'expectedDTO' => new ProductInputDTO(
                     name: 'Banana',
                     quantity: 1.2,
-                    unit: 'kilograms',
+                    unit: 'kg',
                     type: 'fruit'
                 ),
             ],
@@ -78,13 +78,13 @@ class ProductInputDTOFactoryTest extends TestCase
                 'inputData' => [
                     'name' => 'Potato',
                     'quantity' => 1000,
-                    'unit' => 'grams',
+                    'unit' => 'g',
                     'type' => 'vegetable',
                 ],
                 'expectedDTO' => new ProductInputDTO(
                     name: 'Potato',
                     quantity: 1000,
-                    unit: 'grams',
+                    unit: 'g',
                     type: 'vegetable'
                 ),
             ],

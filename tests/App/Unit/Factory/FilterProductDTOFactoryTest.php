@@ -83,12 +83,12 @@ class FilterProductDTOFactoryTest extends TestCase
             ],
             'Mixed case unit string' => [
                 'queryParams' => [
-                    'unit' => 'KiLoGrams',
+                    'unit' => 'Kg',
                     'minQuantity' => '25',
                     'maxQuantity' => '250',
                 ],
                 'expectedDto' => new FilterProductDTO(
-                    unit: 'KiLoGrams',
+                    unit: 'Kg',
                     minQuantity: 25,
                     maxQuantity: 250
                 ),

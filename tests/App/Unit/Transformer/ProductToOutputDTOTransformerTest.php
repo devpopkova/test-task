@@ -25,7 +25,7 @@ class ProductToOutputDTOTransformerTest extends TestCase
         $product->method('getName')->willReturn('Apple');
         $product->method('getQuantity')->willReturn(1500.0);
 
-        $unit = 'kilograms';
+        $unit = 'kg';
         $convertedQuantity = 1.5;
 
         $expectedOutputDTO = new ProductOutputDTO(
