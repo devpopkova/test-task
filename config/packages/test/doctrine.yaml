@@ -11,13 +11,13 @@ doctrine:
     auto_generate_proxy_classes: true
     auto_mapping: true
     query_cache_driver:
-      type: pool # Используем кэш-пул для запросов
+      type: pool
       pool: doctrine.system_cache_pool
     metadata_cache_driver:
-      type: pool # Используем кэш-пул для метаданных
+      type: pool
       pool: doctrine.system_cache_pool
     result_cache_driver:
-      type: pool # Используем кэш-пул для результатов
+      type: pool
       pool: doctrine.result_cache_pool
     mappings:
       App:

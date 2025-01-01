@@ -20,10 +20,10 @@ class ProductToOutputDTOTransformer implements ProductToOutputDTOTransformerInte
     {
         return $this->productOutputDTOFactory->createFromArray(
             [
-            "type" => $product->getType(),
-            "name" => $product->getName(),
-            "quantity" => $this->weightConverter->convertFromGrams($product->getQuantity(), $unit),
-            "unit" => $unit
+                "type" => $product->getType(),
+                "name" => $product->getName(),
+                "quantity" => $this->weightConverter->convertFromGrams($product->getQuantity(), $unit),
+                "unit" => $unit
             ]
         );
     }

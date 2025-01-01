@@ -29,8 +29,8 @@ class ProductController extends AbstractController
         } catch (Exception $e) {
             return new JsonResponse(
                 [
-                'error' =>
-                    json_decode($e->getMessage(), true)
+                    'error' =>
+                        json_decode($e->getMessage(), true)
                 ],
                 Response::HTTP_BAD_REQUEST
             );
@@ -51,8 +51,8 @@ class ProductController extends AbstractController
         } catch (Exception $e) {
             return new JsonResponse(
                 [
-                'error' =>
-                    json_decode($e->getMessage(), true)
+                    'error' =>
+                        json_decode($e->getMessage(), true)
                 ],
                 Response::HTTP_BAD_REQUEST
             );
@@ -66,14 +66,14 @@ class ProductController extends AbstractController
             $this->productService->deleteProduct($type, $id);
             return new JsonResponse(
                 [
-                'message' => 'Product deleted successfully.'
+                    'message' => 'Product deleted successfully.'
                 ], Response::HTTP_OK
             );
         } catch (Exception $e) {
             return new JsonResponse(
                 [
-                'error' => 'An error occurred while deleting the product.',
-                'details' => $e->getMessage()
+                    'error' => 'An error occurred while deleting the product.',
+                    'details' => $e->getMessage()
                 ], Response::HTTP_INTERNAL_SERVER_ERROR
             );
         }

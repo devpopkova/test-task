@@ -17,8 +17,8 @@ class ProductRepository extends ServiceEntityRepository
 {
     public function __construct(
         ManagerRegistry $registry,
-        private WeightConverter $weightConverter)
-    {
+        private WeightConverter $weightConverter
+    ) {
         parent::__construct($registry, Product::class);
     }
 

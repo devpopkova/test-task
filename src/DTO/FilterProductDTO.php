@@ -6,7 +6,6 @@ namespace App\DTO;
 
 use App\Enum\UnitType;
 use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Validator\Context\ExecutionContextInterface;
 
 class FilterProductDTO
 {
